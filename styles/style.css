@@ -86,3 +86,25 @@ input::placeholder
     transition: 0.2s;
     width: 130px;
 }
+
+#link
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    color:#89ada6;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.fa-solid
+{
+    font-size: 13px;
+}
+
+.fa-solid:hover
+{
+    transition: 0.2s;
+    font-size: 25px;
+}
