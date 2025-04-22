@@ -1,4 +1,4 @@
-# Rocketseat Cupcake
+# Cadastro e Login
 ## ![Image](https://github.com/user-attachments/assets/f717d872-0689-457f-8783-09952d585217)
 ## Sobre:
 Atividade de introdução a banco de dados.
