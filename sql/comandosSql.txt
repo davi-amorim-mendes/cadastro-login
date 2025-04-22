@@ -1,0 +1,8 @@
+//CRIA BANCO DE DADOS
+create database cadastrologin;
+
+//ENTRA NO BANCO DE DADOS
+use cadastrologin;
+
+//CRIA TABELA
+create table usuarios (ID int not null auto_increment primary key, Nome varchar(100) not null, Email varchar(100) not null, Senha  varchar(100) not null);

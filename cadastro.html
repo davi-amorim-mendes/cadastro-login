@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main>
+        <div class="inicio">
+            <h1>Cadastro</h1>
+                <form action="cadastroBack.php" method="post">
+                    <div id="formulario">
+                        <label for="nome">Nome: </label>
+                    </div>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome..." required>
+                    <div id="formulario">
+                        <label for="email">Email: </label>
+                    </div>
+                    <input type="text" name="email" id="email" placeholder="Digite seu email..." required>
+                    <div id="formulario">
+                        <label for="senha">Senha:</label>
+                    </div>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." required>
+                    <div id="formulario">
+                        <button type="submit" id="login">Entrar</a></button>
+                    </div>
+                </form>
+        </div>
+    </main>
+</body>
+</html>
