@@ -23,7 +23,21 @@ main
 
 h1
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     color: #d9912b;
+}
+
+h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: #d1ae83;
+    margin-top: 20px;
 }
 
 .inicio
@@ -107,4 +121,32 @@ input::placeholder
 {
     transition: 0.2s;
     font-size: 25px;
+}
+
+table
+{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    table-layout: fixed;
+    border: 2px solid #9c7448;
+    border-radius: 5px;
+    padding: ;
+    color: #d8333d;
+}
+
+#colunas
+{
+    color: #83983e;
+    border: 1px solid #9c7448;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.tabela
+{
+    overflow-y: auto;
 }
