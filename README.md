@@ -6,6 +6,7 @@ Atividade de introdução a banco de dados.
 - Cadastro de usuários
 - Login via email e senha
 - Logout
+- Listar usuários
 ## Linguagens e tecnologias utilizadas:
 [![My Skills](https://skillicons.dev/icons?i=html,css,php,mysql)](https://skillicons.dev)
 - Html
