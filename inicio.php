@@ -9,9 +9,16 @@ if(isset($_SESSION['email']) == true && isset($_SESSION['senha']) == true)
 
     $sql = "SELECT * FROM usuarios ORDER BY ID DESC";
 
+    $sql2 = "SELECT Nome FROM usuarios WHERE Email = '$email'";
+
+    $result2 = $mysqli->query($sql2);
+    
+    $user_data = mysqli_fetch_assoc($result2);
+
+    $nome = $user_data['Nome'];
+
     $result = $mysqli->query($sql);
 
-    print_r($result);
 }
 else
 {
@@ -32,7 +39,7 @@ else
 <body>
     <main>
         <div class='inicio'>
-            <?php echo "<h1>Bem vindo $email!</h1>"?>
+            <?php echo "<h1>Bem vindo $nome!</h1>"?>
             <div id='botao'>
                 <button id='login'><a href='logout.php'>Sair</a></button>
             </div>
@@ -48,11 +55,14 @@ else
                     <?php 
                         while($user_data = mysqli_fetch_assoc($result))
                         {
+                            $id = $user_data['ID'];
                             echo "<tr>";
                             echo "<td id='colunas'>".$user_data['ID']."</td>";
                             echo "<td id='colunas'>".$user_data['Nome']."</td>";
                             echo "<td id='colunas'>".$user_data['Email']."</td>";
                             echo "<td id='colunas'>".$user_data['Senha']."</td>";
+                            echo "<td><button id='tab'><a href='remove.php?ID=".$id."'><i class='fa-solid fa-trash' id='remove'></i></a></button></td>";
+                            echo "<td><button id='tab'><a href='edit.php?ID=".$id."'><i class='fa-solid fa-pen-to-square' id='edit'></i></a></button></td>";
                             echo "</tr>";
                         }
                     ?>

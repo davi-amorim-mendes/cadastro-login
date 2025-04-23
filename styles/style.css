@@ -63,6 +63,9 @@ h2
     width: 100px;
     padding: 10px;
     border-radius: 10px;
+    border: #9c7448;
+    border-width: 2px;
+    border-style: groove;
 }
 
 #botao
@@ -146,7 +149,30 @@ table
     border-radius: 2px;
 }
 
-.tabela
+#tab
 {
-    overflow-y: auto;
+    background-color: transparent;
+    border: none;
+}
+
+#remove
+{
+    color: #d8333d;
+    font-size: 20px;
+}
+#remove:hover
+{
+    color: #d8333d;
+    font-size: 24px;
+}
+
+#edit
+{
+    color: #89ada6;
+    font-size: 20px;
+}
+#edit:hover
+{
+    color: #89ada6;
+    font-size: 24px;
 }

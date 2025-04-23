@@ -1,3 +1,28 @@
+<?php 
+session_start();
+include_once('connection.php');
+
+if(isset($_SESSION['email']) == false && isset($_SESSION['senha']) == false)
+{
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+    header('Location: index.html');
+}
+
+$id = $_GET['ID'];
+
+
+$sql = "SELECT * FROM usuarios WHERE ID = $id";
+
+$result = $mysqli->query($sql);
+
+$user_data = mysqli_fetch_assoc($result);
+
+$nome = $user_data['Nome'];
+$email = $user_data['Email'];
+$senha = $user_data['Senha'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,22 +35,23 @@
 <body>
     <main>
         <div class="inicio">
-            <h1>Cadastro</h1>
-                <form action="cadastroBack.php" method="post">
+            <h1>Edite suas informações</h1>
+                <form action="alter.php" method="post">
                     <div id="formulario">
                         <label for="nome">Nome: </label>
                     </div>
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome..." required>
+                    <input type="text" value="<?=$nome?>" name="nome" id="nome"  required>
                     <div id="formulario">
                         <label for="email">Email: </label>
                     </div>
-                    <input type="text" name="email" id="email" placeholder="Digite seu email..." required>
+                    <input type="text" value="<?=$email?>" name="email" id="email" required>
                     <div id="formulario">
                         <label for="senha">Senha:</label>
                     </div>
-                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." required>
+                    <input type="password" value="<?=$senha?>" name="senha" id="senha" required>
+                    <input type="hidden" name="id" value="<?=$id?>">
                     <div id="formulario">
-                        <button type="submit" id="login">Cadastrar</a></button>
+                        <button type="submit" id="login">Entrar</a></button>
                     </div>
                 </form>
                 <a href="https://br.linkedin.com/in/davi-amorim-mendes-022a01307" id="link" target="_blank"><p>(<i class="fa-solid fa-user"></i>) davi.amorim.mendes.082@gmail.com</p></a>
