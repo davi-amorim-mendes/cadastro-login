@@ -3,10 +3,12 @@
 ## Sobre:
 Atividade de introdução a banco de dados.
 ## Funcionalidades:
-- Cadastro de usuários
-- Login via email e senha
+- Cadastro de usuário
+- Login
 - Logout
 - Listar usuários
+- Editar informações
+- Excluir usuário
 ## Linguagens e tecnologias utilizadas:
 [![My Skills](https://skillicons.dev/icons?i=html,css,php,mysql)](https://skillicons.dev)
 - Html
